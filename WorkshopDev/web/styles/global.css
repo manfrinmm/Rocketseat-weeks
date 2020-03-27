@@ -1,0 +1,86 @@
+html,
+body,
+button,
+input,
+textarea {
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body.hideScroll {
+  overflow: hidden;
+  /* Corrige outros itens aparecerem quando o layout fica pequeno */
+  /* overflow-y: auto; */
+  /* overflow-x: auto; */
+  /* height: 100vw; */
+}
+
+body {
+  background: #e5e5e5;
+  color: #25282b;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.button {
+  color: #fff;
+  background: #ff5e84;
+
+  width: 150px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 16px rgba(255, 0, 92, 0.16);
+}
+
+.button:hover {
+  background: #0984e3;
+  text-decoration: none;
+}
+
+#page-ideas nav li:last-child a:hover {
+  text-decoration: none;
+}
+
+#page-ideas nav li a {
+  color: #25282b;
+}
+
+p,
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+a {
+  color: #ff5e84;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}

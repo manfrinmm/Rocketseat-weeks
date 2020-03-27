@@ -1,0 +1,44 @@
+#intro {
+  width: 300px;
+  margin-right: 64px;
+}
+
+#intro main {
+  margin: 32px 0;
+}
+
+#buttons {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: space-around;
+}
+
+#buttons button {
+  background: transparent;
+  color: #ff5e84;
+
+  border: 0;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#buttons button:hover {
+  text-decoration: underline;
+}
+
+#footer {
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  color: #777;
+}
+
+#footer a {
+  opacity: 0.7;
+}
