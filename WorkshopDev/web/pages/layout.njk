@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+
+    {% block title %}
+      <title>Casa Criativa</title>
+    {% endblock %}
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap"
+      rel="stylesheet"/>
+
+    <link rel="stylesheet" href="styles/global.css"/>
+    <link rel="stylesheet" href="styles/container.css"/>
+    <link rel="stylesheet" href="styles/intro.css"/>
+    <link rel="stylesheet" href="styles/idea.css"/>
+    <link rel="stylesheet" href="styles/ideas.css"/>
+    <link rel="stylesheet" href="styles/content.css"/>
+  </head>
+
+  <body id="{{ bodyId }}">
+
+    <div id="container">
+
+      {% block content %}{% endblock %}
+
+    </div>
+
+    <!-- Modal / pop-up -->
+    {% include "modal.njk" %}
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

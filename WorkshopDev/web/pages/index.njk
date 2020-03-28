@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+  <section id="intro">
+    <header>
+      <a href="./index">
+        <img src="logo.png" alt="Casa Criativa ideias para a crise"/>
+      </a>
+    </header>
+    <main>
+      <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+
+      <p>
+      Por isso, iremos catalogar ideias,<strong>
+        brincadeiras, jogos, filmes, livros, cursos, dicas
+      </strong>
+      e tudo que for necessário para tornar esse momento mais interessante
+    </p>
+
+      <p>
+      Comece clicando em veer ideias para ver as ideias cadastradas e contribua
+      adicionando a sua idea
+    </p>
+    </main>
+
+    <section id="buttons">
+      <button onclick="onOff()">+ Adicionar Ideia</button>
+      <a href="./ideias" class="button">Ver Ideias</a>
+    </section>
+
+    {% include "footer.njk" %}
+  </section>
+
+  <section id="last-ideias">
+    {% for idea in lastIdeas %}
+
+      <div class="idea">
+        <img src="{{ idea.img }}" alt="Imagem de {{ idea.title }}"/>
+        <dv class="content">
+          <h3>{{ idea.title }}</h3>
+          <p>{{ idea.category }}</p>
+          <div class="description">
+            {{ idea.description }}
+          </div>
+          <a href="{{ idea.url }}" target="_blank">Ir para ideia</a>
+        </dv>
+      </div>
+
+    {% endfor %}
+  </section>
+
+{% endblock %}
