@@ -3,7 +3,7 @@
 
   <section id="intro">
     <header>
-      <a href="./index">
+      <a href="/">
         <img src="logo.png" alt="Casa Criativa ideias para a crise"/>
       </a>
     </header>
@@ -34,17 +34,7 @@
   <section id="last-ideias">
     {% for idea in lastIdeas %}
 
-      <div class="idea">
-        <img src="{{ idea.img }}" alt="Imagem de {{ idea.title }}"/>
-        <dv class="content">
-          <h3>{{ idea.title }}</h3>
-          <p>{{ idea.category }}</p>
-          <div class="description">
-            {{ idea.description }}
-          </div>
-          <a href="{{ idea.url }}" target="_blank">Ir para ideia</a>
-        </dv>
-      </div>
+      {% include "itemIdea.njk" %}
 
     {% endfor %}
   </section>

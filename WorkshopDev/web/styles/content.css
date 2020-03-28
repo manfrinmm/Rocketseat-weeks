@@ -54,6 +54,21 @@
   grid-column: span 2;
 }
 
+.input-wrapper input.error,
+.input-wrapper textarea.error {
+  border: 3px solid red;
+}
+
+.input-wrapper span {
+  font-weight: bold;
+  color: darkred;
+  margin-top: 4px;
+}
+
+.input-wrapper span.error {
+  display: block;
+}
+
 form input,
 form textarea {
   width: 100%;
@@ -64,6 +79,7 @@ form textarea {
   border: 1px solid rgba(141, 25, 52, 0.5);
 
   font-size: 16px;
+  transition: 400ms;
 }
 
 form label {

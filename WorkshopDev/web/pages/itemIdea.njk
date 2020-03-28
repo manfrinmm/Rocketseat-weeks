@@ -1,11 +1,12 @@
 <div class="idea">
-  <img src="{{ idea.img }}" alt="Imagem de {{idea.title}}" />
-  <dv class="content">
+  <img src="{{ idea.img_url }}" alt="Imagem de {{ idea.title }}" />
+  <div class="content">
     <h3>{{ idea.title }}</h3>
-    <p>{{idea.category}}</p>
+    <p>{{ idea.category }}</p>
     <div class="description">
-      {{idea.description}}
+      {{ idea.description }}
     </div>
-    <a href="{{idea.url}}" target="_blank">Ir para ideia</a>
-  </dv>
+    <a href="{{ idea.idea_url }}" target="_blank">Ir para ideia</a>
+    <a class="button" href="delete/{{ idea.id }}">Deletar</a>
+  </div>
 </div>

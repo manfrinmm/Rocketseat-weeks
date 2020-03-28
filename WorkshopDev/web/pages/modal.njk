@@ -2,38 +2,43 @@
   <div class="content">
     <h1>Nova ideia</h1>
 
-    <form action="">
+    <form action="/idea" method="POST" onsubmit="return checkFields(event)">
       <div class="input-wrapper">
         <label for="title"> Título da ideia </label>
-        <input type="text" name="title" id="title"/>
+        <input type="text" name="title" id="title" />
+        <span class="hide">Este campo é obrigatório</span>
       </div>
 
       <div class="input-wrapper">
         <label for="category"> Categoria </label>
-        <input type="text" name="category" id="category"/>
+        <input type="text" name="category" id="category" />
+        <span class="hide">Este campo é obrigatório</span>
       </div>
 
       <div class="input-wrapper">
-        <label for="image"> Link da imagem </label>
-        <input type="url" name="image" id="image"/>
+        <label for="img_url"> Link da imagem </label>
+        <input type="url" name="img_url" id="image" />
+        <span class="hide">Este campo é obrigatório</span>
       </div>
 
       <div class="input-wrapper">
         <label for="description">
-              Digite uma descrição para essa ideia
-            </label>
+          Digite uma descrição para essa ideia
+        </label>
         <textarea
-              type="text"
-              name="description"
-              id="description"
-              cols="30"
-              rows="10"
-            ></textarea>
+          type="text"
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span class="hide">Este campo é obrigatório</span>
       </div>
 
       <div class="input-wrapper">
-        <label for="link"> Link da ideia </label>
-        <input type="url" name="link" id="link"/>
+        <label for="idea_url"> Link da ideia </label>
+        <input type="url" name="idea_url" id="link" />
+        <span class="hide">Este campo é obrigatório</span>
       </div>
 
       <a onclick="onOff()">Cancelar</a>
