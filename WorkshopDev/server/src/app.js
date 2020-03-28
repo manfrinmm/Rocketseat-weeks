@@ -6,6 +6,8 @@ import routes from "./routes";
 
 const server = express();
 
+server.use(express.urlencoded({ extended: true }));
+
 const pathViews = resolve(__dirname, "..", "..", "web", "pages");
 const publicPath = resolve(__dirname, "..", "..", "web");
 
