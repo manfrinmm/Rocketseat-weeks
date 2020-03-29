@@ -26,6 +26,7 @@ module.exports = {
         newlinesBetween: "always",
         groups: [
           "/^sequelize/",
+          "/^express/",
           "module",
           "/^~/",
           ["parent", "sibling", "index"],
