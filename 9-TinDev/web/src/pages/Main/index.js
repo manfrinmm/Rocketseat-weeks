@@ -21,7 +21,7 @@ export default function Main({ match }) {
     async function loadUsers() {
       setLoading(true);
       const { data } = await api.get("devs", {
-        headers: { user }
+        headers: { user },
       });
 
       setUsers(data);
@@ -32,29 +32,29 @@ export default function Main({ match }) {
   }, [user]);
 
   useEffect(() => {
-    const socket = io("http://localhost:3000", {
-      query: { user }
+    const socket = io(process.env.REACT_APP_API_URL, {
+      query: { user },
     });
 
-    socket.on("match", dev => {
+    socket.on("match", (dev) => {
       setmatchDev(dev);
     });
   }, [user]);
 
   async function handleLike(id) {
     await api.post(`devs/${id}/likes`, null, {
-      headers: { user }
+      headers: { user },
     });
 
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(users.filter((user) => user._id !== id));
   }
 
   async function handleDislike(id) {
     await api.post(`devs/${id}/dislikes`, null, {
-      headers: { user }
+      headers: { user },
     });
 
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(users.filter((user) => user._id !== id));
   }
 
   return (
@@ -66,7 +66,7 @@ export default function Main({ match }) {
         <div id="aa">Carregando...</div>
       ) : users.length > 0 ? (
         <ul>
-          {users.map(user => (
+          {users.map((user) => (
             <Itens key={user._id}>
               <img src={user.avatar} alt={user.name} />
 
