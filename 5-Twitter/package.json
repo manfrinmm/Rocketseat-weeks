@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "server",
+    "clients/*"
+  ],
+  "scripts": {
+    "server": "yarn workspace server",
+    "web": "yarn workspace web",
+    "mobile": "yarn workspace mobile"
+  }
+}
